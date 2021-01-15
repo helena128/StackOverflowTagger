@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import joblib
 import traceback
 
-from api.text_processor import TextPreprocessor
+from text_processor import TextPreprocessor
 
 app = Flask(__name__)
 
@@ -40,7 +40,7 @@ def predict():
 
 if __name__ == '__main__':
     print('Start init text preprocessor')
-    TextPreprocessor.init()
+    # TextPreprocessor.init()
     print('Text preprocessor initialized')
 
     print('Start model loading')
