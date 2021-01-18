@@ -6,3 +6,6 @@ Auto-tagging of StackOverflow Questions
 
 [Presentation](https://github.com/helena128/StackOverflowTagger/raw/master/DT_NLP.pdf)
 
+## Python notebooks with models
+[Approach #1](https://github.com/helena128/StackOverflowTagger/blob/master/DT_NLP.ipynb)
+[Approach #2](https://github.com/helena128/StackOverflowTagger/blob/master/DT_NLP_Multiclass.ipynb)
