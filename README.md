@@ -2,9 +2,7 @@
 
 Auto-tagging of StackOverflow Questions
 
+![kek](https://miro.medium.com/max/1400/1*zEi3upbdEgU2CmRVe8WBiA.jpeg)
 
-<object data="http://yoursite.com/the.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/helena128/StackOverflowTagger/raw/master/DT_NLP.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+[Presentation](https://github.com/helena128/StackOverflowTagger/raw/master/DT_NLP.pdf)
+
