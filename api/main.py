@@ -20,7 +20,7 @@ def predict():
         import numpy as np
 
         all_probs = model.predict_proba(X)
-        topk_idx = np.argpartition(y, -k)[:, :-k-1:-1]
+        topk_idx = np.argpartition(all_probs, -k)[:, :-k-1:-1]
         topk_classes = model.classes_[topk_idx]
         topk_probs = np.array([all_probs[n, idx]
                                for n, idx in enumerate(topk_idx)])
@@ -54,7 +54,7 @@ def predict():
 
 if __name__ == '__main__':
     print('Start init text preprocessor')
-    # TextPreprocessor.init()
+    TextPreprocessor.init()
     print('Text preprocessor initialized')
 
     print('Start model loading')
