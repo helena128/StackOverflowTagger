@@ -20,6 +20,7 @@ def predict():
         import numpy as np
 
         all_probs = model.predict_proba(X)
+        k = max(min(all_probs.size, k), 1)
         topk_idx = np.argpartition(all_probs, -k)[:, :-k-1:-1]
         topk_classes = model.classes_[topk_idx]
         topk_probs = np.array([all_probs[n, idx]
