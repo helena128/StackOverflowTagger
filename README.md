@@ -11,6 +11,27 @@ Auto-tagging of StackOverflow Questions
 
 [Approach #2](https://github.com/helena128/StackOverflowTagger/blob/master/DT_NLP_Multiclass.ipynb) - multiclass model
 
+## API description
+
+**Request**
+
+Path: /predict
+
+Method: POST
+
+JSON parameters:
+- title - title of question
+- body - body of question
+- k (optional, default=3) - number of keywords [1,feature_size]
+- debug (optional, default=false) - shows cleaned ‘title’ and ‘article’ parameters
+
+**Response**
+
+JSON response:
+- prediction - predicted features
+- title - cleaned 'title' parameter (debug mode only)
+- body - cleaned 'body' parameter (debug mode only)
+
 ## Build and run docker image with REST API
 **Build image**
 
