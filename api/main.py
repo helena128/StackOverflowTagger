@@ -36,14 +36,18 @@ def predict():
             title = TextPreprocessor.clean_text(json_['title'])
             body = TextPreprocessor.clean_text(json_['body'])
             k = json_.get('k', 3)
+            debug = json_.get('debug', False)
 
             query = title + ' ' + body
             prediction = run_model(model, [query], k)[0]
 
-            return jsonify({
-                'title': title,
-                'body': body,
-                'prediction': prediction})
+            response_dict = {'prediction': prediction}
+            if debug:
+                response_dict['title'] = title
+                response_dict['body'] = body
+
+
+            return jsonify(response_dict)
 
         except:
             return jsonify({'trace': traceback.format_exc()})
