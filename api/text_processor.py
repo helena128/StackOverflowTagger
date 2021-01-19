@@ -11,7 +11,8 @@ class TextPreprocessor:
 
     @staticmethod
     def init():
-        nltk.download('stopwords')
+        # uncomment for first local run
+        # nltk.download('stopwords')
         TextPreprocessor.STOPWORDS = set(stopwords.words('english'))
 
     @staticmethod
